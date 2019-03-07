@@ -25,6 +25,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', ')cm^r!8tkgq^ugfajcegbo-z=ojou!@4g-64@e4wr)+3*t8sqc')
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = True
+DEBUG = bool( os.environ.get('DJANGO_DEBUG', True) )
 # Application definition
 
 INSTALLED_APPS = [
@@ -128,4 +129,4 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-MEDIA_URL = '/medai/'
+MEDIA_URL = '/media/'
